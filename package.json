@@ -66,6 +66,12 @@
   },
   "files": [
     "lib/**/*",
+    "src/**/*",
+    "tests/**/*",
+    "utils/**/*",
+    "jest-setup.js",
+    "jest-config.js",
+    ".babelrc.js",
     "puppeteer-config.json"
   ]
 }
