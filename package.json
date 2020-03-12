@@ -16,6 +16,7 @@
     "prebuild": "node utils/update-puppeteer-config.js",
     "prepare:core": "node utils/prepare-israeli-bank-scrapers-core.js && npm i --package-lock-only && npm ci && npm run build",
     "prepare:default": "npm ci && npm run build",
+    "postinstall": "npm run build",
     "reset": "git reset --hard && npm ci",
     "publish:core": "npm run prepare:core && npm publish --access public && npm run reset",
     "publish:default": "npm run prepare:default && npm test && npm publish --access public && npm run reset",
