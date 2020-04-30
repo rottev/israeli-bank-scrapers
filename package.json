@@ -16,8 +16,8 @@
     "prebuild": "node utils/update-puppeteer-config.js",
     "prepare:core": "node utils/prepare-israeli-bank-scrapers-core.js && npm i --package-lock-only && npm ci && npm run build",
     "prepare:default": "npm ci && npm run build",
+    "prepare": "npm run build",
     "reset": "git reset --hard && npm ci",
-    "postinstall": "npm install && npm run build",
     "publish:core": "npm run prepare:core && npm publish --access public && npm run reset",
     "publish:default": "npm run prepare:default && npm test && npm publish --access public && npm run reset",
     "publish:all": "npm run publish:default && npm run publish:core"
@@ -54,9 +54,7 @@
     "json2csv": "^4.2.1",
     "ncp": "^2.0.0",
     "pre-commit": "^1.2.2",
-    "rimraf": "^3.0.0"
-  },
-  "dependencies": {
+    "rimraf": "^3.0.0",
     "build-url": "^2.0.0",
     "core-js": "^3.1.4",
     "lodash": "^4.17.10",
@@ -64,5 +62,27 @@
     "node-fetch": "^2.2.0",
     "uuid": "^3.3.2",
     "puppeteer": "^2.0.0"
-  }
+  },
+  "dependencies": { "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-import-visitor": "^0.2.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^24.8.0",
+    "json2csv": "^4.2.1",
+    "ncp": "^2.0.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^3.0.0",
+    "build-url": "^2.0.0",
+    "core-js": "^3.1.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "node-fetch": "^2.2.0",
+    "uuid": "^3.3.2",
+    "puppeteer": "^2.0.0"
+   }
 }
